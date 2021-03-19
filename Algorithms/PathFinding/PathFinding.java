@@ -1,3 +1,5 @@
+package Algorithms.PathFinding;
+
 //get the start node 
 class PathFinding {
     public static void main(String[] args) {

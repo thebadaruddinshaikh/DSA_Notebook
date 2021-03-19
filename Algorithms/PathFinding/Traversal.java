@@ -1,3 +1,5 @@
+package Algorithms.PathFinding;
+
 import java.util.*;
 
 class Traversal {
