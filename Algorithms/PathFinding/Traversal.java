@@ -3,17 +3,31 @@ package Algorithms.PathFinding;
 import java.util.*;
 
 class Traversal {
+    List<Integer> order = new ArrayList();
 
-    public List<Integer> inOrderTraversal() {
-        return new ArrayList();
+    public void inOrderTraversal(TreeNode node) {
+        if (node != null) {
+            inOrderTraversal(node.left);
+            order.add(node.val);
+            inOrderTraversal(node.right);
+        }
     }
 
-    public List<Integer> preOrderTraversal() {
-        return new ArrayList();
+    public void preOrderTraversal(TreeNode node) {
+        if (node != null) {
+            order.add(node.val);
+            preOrderTraversal(node.left);
+            preOrderTraversal(node.right);
+        }
+
     }
 
-    public List<Integer> postOrderTraversal() {
-        return new ArrayList();
+    public void postOrderTraversal(TreeNode node) {
+        if (node != null) {
+            postOrderTraversal(node.left);
+            postOrderTraversal(node.right);
+            order.add(node.val);
+        }
     }
 
     public List<Integer> LevelOrderTraversal() {
